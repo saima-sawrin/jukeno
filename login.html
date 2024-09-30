@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LTP 36.0 (JuKeno)</title>
+        <!-- Bootstrap -->
+         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+       <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <!-- Font awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/regular.min.css" integrity="sha512-j+P0XpTXw+hDTK64xqC/cjv62cf629/IR4/0bokmich7J8XdVlWT40+1M/Z58rCQ4F+3QoJIfzh6Ui6TTIP6WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+  <body>
+
+<main>
+      <!-- Navbar start-->
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/Logo.png" srcset="" class="h-logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item text-white ">
+                
+              </li>
+        
+            </ul> -->
+            <a class="nav-link active" aria-current="page" href="#">EN <i class="fa-solid fa-globe"></i></a>
+          </div>
+          <div class="wrap">
+            <div class="search">
+               <input type="text" class="searchTerm" placeholder="What are you looking for?">
+               <button type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
+
+          <div class="d-flex " style="column-gap: 10px;">
+ <a class="m-auto" href="login.html" style="color: #BFD7EA;">Log In</a>
+              <img width="28" height="28" class="m-auto" src="images/Vector.png" alt="user-male-circle--v1">
+        
+             <button type="submit" class="postButton">
+              Post Ad
+            </button>
+          </div>
+
+        </div>
+      </nav>
+  <!-- Navbar end -->
+   <section>
+    <div class="container login-container" style="position: relative;">
+      <div class="form-wrap" >
+       <div style="padding: 1.5em 1.5em 0 2.3em;">
+        <div class="tabs">
+          <h5 class="signup-tab"><a class="active" href="#signup-tab-content">SIGN IN</a></h5>
+          <h5 class="login-tab"><a href="#login-tab-content">REGISTER</a></h5>
+        </div>
+       </div>
+           
+        <div class="tabs-content">
+          <div id="signup-tab-content" class="active">
+            <div class="container login-form-container">
+              <div class="row justify-content-center ">
+                <span >Sign in with your registered email.</span>
+                  <div class=" col-lg-12 mt-4">
+  
+                      <form id="account" method="post">
+   
+                          <!-- Email input -->
+                          <div class=" wrap-input100 userInput validate-input mb-3" data-validate="Valid email is required: ex@abc.xyz">
+                              <label for="name">Email Address</label>
+                              <div class="input-group loginInput">
+                               
+                                  <input asp-for="Input.Email" type="text" class="form-control" aria-label="email" placeholder="Type your email" required="" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Input_Email" value="">
+                                  <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
+                                  <span asp-validation-for="Input.Email" class="text-danger"></span>
+                              </div>
+                          </div>
+                          <!-- Password input -->
+                          <div class=" wrap-input100 passInput validate-input mb-3">
+                              <label for="name">Password</label>
+                              <div class="input-group loginInput">
+                          
+   
+                                  <input  type="password" id="password" class="form-control password" aria-label="pass" placeholder="Type your password" required="" data-val="true" data-val-required="The Password field is required.">
+   
+   
+                                  <div class="input-group-prepend">
+                                      <div class="input-group-icon">
+                                          <span class="password-toggle-icon"><i class="fas fa-eye-slash" id="togglePassword" ></i></span>
+                                      </div>
+                                  </div>
+   
+                                  <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                              </div>
+   
+                          </div>
+                          <!-- 2 column grid layout for inline styling -->
+                          <div class="row mb-4">
+                              <div class="col d-flex">
+      
+                                  <div class="form-check w-50">
+                                      <input id="signed_checkbox" class="form-check-input"
+                                             type="checkbox"
+                                             value=""
+                                             checked
+                                             placeholder="Type your password" />
+   
+                                      <label class="form-check-label " for="signed_checkbox">
+                                         Keep me signed in
+                                      </label>
+                                  </div>
+                                  <div class="form-check w-50 " style="text-align: right;">
+                                  
+ 
+                                    <label class="form-check-label  text-primary ">
+                                Forgot password?
+                                    </label>
+                                </div>
+                              </div>
+   
+                              <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                          </div>
+               
+                                 
+
+                     <button ype="submit" class="button" onclick="navigateToDashboard()">Sign In</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+    
+          <div id="login-tab-content">
+            <span >Registere with your email</span>
+              <form action="" class="mt-4">
+                <div class="row ">
+                  <div class="form-group col-lg-6">
+                    <label for="Name">First Name</label>
+                    <input type="text" class="form-control col-lg-12" id="cName" placeholder="e.g.,Ali khan">
+                </div>
+                  <div class="form-group col-lg-6">
+                    <label for="Name">Last Name</label>
+                    <input type="text" class="form-control col-lg-12" id="cName" placeholder="e.g.,Ali khan">
+                </div>
+              </div>
+                  <div class="row my-3">
+                    <div class="form-group col-lg-12">
+                        <label for="Name">Email Addres</label>
+                        <input type="email" class="form-control col-lg-12" id="cName" placeholder="e.g.,Ali@gmail.com">
+                    </div>
+                </div>
+                <div class="row ">
+                  <div class="form-group col-lg-12">
+                      <label for="Name">Phone Number</label>
+                      <input type="number" class="form-control col-lg-12" id="cName" placeholder="e.g.,01803445555">
+                  </div>
+              </div>
+            <!-- Password input -->
+            <div class=" wrap-input100 passInput validate-input my-3">
+              <label for="name">Password</label>
+              <div class="input-group loginInput">
+          
+
+                  <input  type="password" id="password2" class="form-control password" aria-label="pass" placeholder="Type your password" required="" data-val="true" data-val-required="The Password field is required." >
+
+
+                  <div class="input-group-prepend">
+                      <div class="input-group-icon">
+                          <span class="password-toggle-icon"><i class="fas fa-eye-slash" id="togglePassword2" ></i></span>
+                      </div>
+                  </div>
+
+                  <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+              </div>
+
+          </div>
+         
+                  <!-- Password input -->
+                  <div class=" wrap-input100 passInput validate-input mb-4">
+                    <label for="name">Re-Type Password</label>
+                    <div class="input-group loginInput">
+                
+
+                        <input  type="password" id="password3" class="form-control password" aria-label="pass" placeholder="Re-Type your password" required="" data-val="true" data-val-required="The Password field is required.">
+
+
+                        <div class="input-group-prepend">
+                            <div class="input-group-icon">
+                                <span class="password-toggle-icon"><i class="fas fa-eye-slash" id="togglePassword3" ></i></span>
+                            </div>
+                        </div>
+
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                    </div>
+
+             
+            </div>
+                            <!-- 2 column grid layout for inline styling -->
+                            <div class="row mb-4">
+                              <div class="col ">
+      
+                                  <div class="form-check ">
+                                      <input class="form-check-input"
+                                             type="checkbox"
+                                             value=""
+                                             checked
+                                             placeholder="Type your password" />
+    
+                                      <label class="form-check-label remember">
+                                        I am a landlord
+                                      </label>
+                                  </div>
+                                  
+                              </div>
+                              <div class="row">
+                                <div class="col ">
+      
+                                  <div class="form-check ">
+                                      <input class="form-check-input"
+                                             type="checkbox"
+                                             value=""
+                                             checked
+                                             placeholder="Type your password" />
+      
+                                      <label class="form-check-label remember">
+                                        I have read and agree with the <a href="info.html">Terms and Conditions</a>
+                                        also <a href="info.html">Privacy Policy</a> 
+                                      </label>
+                                  </div>
+                                  
+                              </div>
+                              </div>
+                     
+    
+                              <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                          </div>
+               
+                                 
+                          <!-- Submit button -->
+                          <button ype="submit" class="button" onclick="window.location.href='reg.html';">Register</button>
+                            <!-- <input type="submit" class="button" onclick="window.location.href='dashboard.html';"  value="Register"> -->
+          </div>
+             
+              </form>
+    
+          </div>
+          <img src="images/vector/Help.png" alt="" style="  position: absolute;
+          width: 44px; right: 5%; bottom: 0px;
+          ">
+        </div>
+    
+      </div>
+      
+    </div>
+
+   </section>
+    <!-- Footer start -->
+ <div style="height: 7px; background-color: #E20A0A; "></div>
+ <footer class=" text-center">
+ <!-- Grid container -->
+ <div class="container p-4">
+ 
+   <!-- Section: Links -->
+   <section class="">
+     <!--Grid row-->
+     <div class="row">
+               <!--Grid column-->
+               <div class="col-lg-2 text-start">
+                <img src="images/Logo.png" alt="" class="f-logo">
+               </div>
+               <!--Grid column-->
+       <!--Grid column-->
+       <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
+         <h5 >Customer Service</h5>
+ 
+         <ul class="list-unstyled mb-0">
+           <li>
+             <a class=""href="#!">Help Centre</a>
+           </li>
+           <li>
+             <a class=""href="#!">How To Buy</a>
+           </li>
+           <li>
+             <a class=""href="#!">How To Sell</a>
+           </li>
+           <li>
+             <a class=""href="#!">Return & Refund</a>
+           </li>
+         </ul>
+       </div>
+       <!--Grid column-->
+ 
+       <!--Grid column-->
+       <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
+         <h5>JuKeno Account
+         </h5>
+ 
+         <ul class="list-unstyled mb-0">
+           <li>
+             <a class=""href="login.html">Sign in
+             </a>
+           </li>
+           <li>
+             <a class=""href="#!">Create Account
+             </a>
+           </li>
+           <li>
+             <a class=""href="#!">Forgot Password
+             </a>
+           </li>
+        
+         </ul>
+       </div>
+       <!--Grid column-->
+ 
+       <!--Grid column-->
+       <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
+         <h5 >Get to know JuKeno</h5>
+ 
+         <ul class="list-unstyled mb-0">
+           <li>
+             <a class=""href="about.html">About Us</a>
+           </li>
+           <li>
+             <a class=""href="#!">Terms</a>
+           </li>
+           <li>
+             <a class=""href="#!">Privacy</a>
+           </li>
+           <li>
+             <a class=""href="#!">FAQ</a>
+           </li>
+           <li>
+             <a class=""href="#!">Contact Us</a>
+           </li>
+         </ul>
+       </div>
+       <!--Grid column-->
+ 
+       <!--Grid column-->
+       <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+         <h5 >Follow Us</h5>
+ 
+         <ul class="list-unstyled mb-0">
+      
+           <li>
+     
+           <a href="index.html" class="text-reset fw-bold ">
+                           
+             <!-- <i class="fa-brands fa-facebook"></i> -->
+             <!-- <i class="fa-brands fa-square-instagram"></i> -->
+             <!-- <i class="fa-solid fab fab fa-linkedin "></i> -->
+             <img src="images/fb.png" alt="">
+             <img src="images/insta.png" alt="">
+              <img src="images/simple.png" alt="">
+ 
+            </a>
+           </li>
+         
+         </ul>
+       </div>
+       <!--Grid column-->
+       <div class="col-lg-1 col-md-6 m-auto text-start ">
+         <img src="images/house.png" alt="" style="width: 60px; height: 60px;">
+        </div>
+     </div>
+     <!--Grid row-->
+   </section>
+ 
+ </div>
+ <!-- Grid container -->
+ 
+ <div class="text-center p-3" style="background-color: #C4C4C4; color: #868686;">
+   <a class="text-reset fw-bold"style=" color: #868686;" href="https://eunoiaits.com/">Eunoia I.T Solutions © 2024</a>
+ </div>
+ 
+ </footer>
+ 
+  <!-- Footer end -->
+ </main>
+  
+ <!-- Bootstrap -->
+ 
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+ 
+  <script>
+;
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll('.tabs h5 a');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+
+            const tabContentId = this.getAttribute('href');
+            const tabContents = document.querySelectorAll('div[id$="tab-content"]');
+
+            tabContents.forEach(content => content.classList.remove('active'));
+            document.querySelector(tabContentId).classList.add('active');
+        });
+    });
+});
+
+// Showpassword 
+function togglePasswordVisibility(passwordId, toggleId) {
+    const password = document.getElementById(passwordId);
+    const toggleButton = document.getElementById(toggleId);
+
+    if (password.type === "password") {
+        password.type = "text";
+        toggleButton.classList.remove('fa-eye-slash');
+        toggleButton.classList.add('fa-eye');
+    } else {
+        password.type = "password";
+        toggleButton.classList.remove('fa-eye');
+        toggleButton.classList.add('fa-eye-slash');
+    }
+}
+
+document.getElementById("togglePassword").addEventListener("click", function() {
+    togglePasswordVisibility("password", "togglePassword");
+});
+
+document.getElementById("togglePassword2").addEventListener("click", function() {
+    togglePasswordVisibility("password2", "togglePassword2");
+});
+
+document.getElementById("togglePassword3").addEventListener("click", function() {
+    togglePasswordVisibility("password3", "togglePassword3");
+});
+
+function navigateToDashboard() {
+    fetch('dashboard.html')
+    .then(response => {
+        if (response.ok) {
+            window.location.href = 'dashboard.html';
+        } else {
+            window.location.href = 'error.html'; 
+        }
+    })
+    .catch(error => {
+        window.location.href = 'error.html';
+    });
+}
+</script>
+
+ </body>
+ </html>

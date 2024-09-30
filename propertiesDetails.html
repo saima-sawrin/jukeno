@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LTP 36.0 (JuKeno)</title>
+        <!-- Bootstrap -->
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <!-- Font awesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/regular.min.css" integrity="sha512-j+P0XpTXw+hDTK64xqC/cjv62cf629/IR4/0bokmich7J8XdVlWT40+1M/Z58rCQ4F+3QoJIfzh6Ui6TTIP6WQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- select 2 css -->
+<link href="select2/css/select2.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+  <body>
+
+<main>
+
+      <!-- Navbar start-->
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/Logo.png" srcset="" class="h-logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item text-white ">
+                
+              </li>
+        
+            </ul> -->
+            <a class="nav-link active" aria-current="page" href="#">EN <i class="fa-solid fa-globe"></i></a>
+          </div>
+          <div class="wrap">
+            <div class="search">
+               <input type="text" class="searchTerm" placeholder="What are you looking for?">
+               <button type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+         </div>
+
+          <div class="d-flex " style="column-gap: 10px;">
+            <!-- <a class="nav-link active" aria-current="page" href="#">Log In<i class="fa-solid fa-globe"></i></a> -->
+
+              <div class="user" style="position: relative; display: flex; align-items: center;">
+                <img class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" 
+               width="28" height="28" class="m-auto" src="images/Vector.png" >
+               <ul class="dropdown-menu">
+                <li><a id="dashboard" class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                <li><a id="profile" class="dropdown-item" href="profile.html">Profile</a></li>
+                <li><a id="post" class="dropdown-item" href="post.html">Post Item</a></li>
+                <li><a id="favourite" class="dropdown-item" href="favourite.html">Favourite</a></li>
+                <li><a id="contact" class="dropdown-item" href="contact.html">Contact Us</a></li>
+                <li><a id="logout" class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+              </div>
+        
+             <button type="submit" class="postButton">
+              Post Ad
+            </button>
+          </div>
+
+        </div>
+      </nav>
+  <!-- Navbar end -->
+  <!-- properties-gallery-section -->
+  <section class="my-5">
+    <div class="container text-center properties-gallery-section">
+     <div class="gallery-section">
+      <!-- <div class="p-gallery shadow p-3 " >
+        <div class="item1" style="position: relative;">
+<img src="images/home/p1.png" alt="">
+<div class="pd-premium-label shadow-sm" >
+    <a target="_blank" href="#">Premium</a>
+  </div>
+        </div>
+        <div class="item2">
+           <div class="img1">
+            <img src="images/home/p2.png" alt="">
+           </div>
+           <div class="img2 mt-3">
+            <img src="images/home/p3.png" alt="">
+           </div>
+         </div>
+         <div class="item3">
+            <div class="img1">
+             <img src="images/home/p2.png" alt="">
+            </div>
+            <div class="img2 mt-3 ">
+             <img src="images/home/p3.png" alt="">
+            </div>
+          </div>
+      
+     
+        </div> -->
+        <div class="p-gallery-grid shadow">
+          <div class="item1" style="position: relative;"><img src="images/home/p1.png" alt="" style="height: 100%;">
+            <div class="pd-premium-label shadow-sm" >
+              <a target="_blank" href="#">Premium</a>
+            </div>
+          </div>
+
+          <div class="item2">            <img src="images/home/p2.png" alt=""></div>  
+          <div class="item3">     <img src="images/home/p2.png" alt=""></div>
+          <div class="item4">          <img src="images/home/p3.png" alt=""></div>
+          <div class="item5">          <img src="images/home/p3.png" alt=""></div>
+        </div>
+
+     <div>
+      <div class="d-flex mt-4 " style="justify-content: space-between;">
+      <div class="item1 fw-bold text-start">
+        <span class="" style="color: #E20A0A;">4 <a href="#"><i class="fa-solid fa-bed "  style="color: #E20A0A; margin: 0 7px; "></i></a></span>
+        <span class="" style="color: #E20A0A;">3 <a href="#"><i class="fa-solid fa-bath" style="color: #E20A0A;  margin: 0 7px;"></i></a></span>
+        <span class="" style="color: #E20A0A; padding-left: 20px;">
+          1000sqf
+
+        </span>
+      </div>
+        <div class="item2 d-flex text-end">
+          <p class="fw-bold me-2">Available from <br>
+              15 May, 2024</p>
+              <img src="images/icon/share.png" alt="" style="width: 19px; height: 19px;">
+              <!-- <i style="color:#087E8B" class="px-1 fa-solid   fa-share-nodes"></i> -->
+              <i style="color:#087E8B" class="px-1 fa-regular fa-heart"></i>
+              <i style="color:#087E8B" class="px-1 fa-regular fa-bookmark"></i>
+              <i style="color:#087E8B" class="px-1 fa-regular fa-flag"></i>
+         </div>
+       </div>
+
+      
+     </div>
+     <!-- Location Section  -->
+     <h6 style="text-align: justify; margin: 20px 0; font-weight: 600;">Nearby Places</h6>
+     <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Dhaka,%20Bangladesh+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div>
+     <div>
+      <h6 style="text-align: justify; margin: 20px 0; font-weight: 600;">Description</h6>
+      <p style="text-align: justify;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat cum quaerat neque similique! Nam non consequuntur commodi similique earum corporis quo quos quidem tempora totam, mollitia quasi optio quas sed.
+        Exercitationem aliquid ex fuga magnam minus reiciendis magni illum beatae illo quos voluptates hic id neque deserunt velit, autem facere debitis ad. Fugit nesciunt sed at, temporibus dolorum quas neque.
+  </p>
+      
+     </div>
+     <div>
+      <h6 style="text-align: justify; margin: 20px 0; font-weight: 600;">Amenities</h6>
+      <p style="text-align: justify;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat cum quaerat neque similique! Nam non consequuntur commodi similique earum corporis quo quos quidem tempora totam, mollitia quasi optio quas sed.
+        Exercitationem aliquid ex fuga magnam minus reiciendis magni illum beatae illo quos voluptates hic id neque deserunt velit, autem facere debitis ad. Fugit nesciunt sed at, temporibus dolorum quas neque.
+  </p>
+      
+     </div>
+     <!-- About Developers Section -->
+      <h6  class="text-start fw-medium my-4">About Developers</h6>
+     <div class="row mt-2">
+      <div class="col-lg-2 d-flex justify-content-center align-items-center mt-2 " style="margin-bottom: auto; width: auto;">
+        <img src="images/properties/Profile Picture (1).png"
+          class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="60" height="70" />
+      </div>
+      <div class="col-lg-10" style="text-align: justify;">
+      <div class="d-flex align-items-center g-3">
+        <img src="images/properties/EEJARA LOGO-02-02 1.png" alt="">
+        <span class="lead ">Eejara Developers</span>
+      </div>
+
+        <p class=" fw-light mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+      </div>
+    </div>
+    </div>
+      <div class="p-details shadow p-3 text-start " style="background-color: white; height: 35%;">
+       <h5>Modern Adobe</h5>
+       <span ><i class="fa-solid fa-location-dot"></i>
+        For Rent in Binodpur, Rajshahit</span>
+        <br>
+        <p class="fw-medium my-2" style="color: #E20A0A;">
+           <span style="font-size: 14px;">BDT</span>  100,000 / Month
+
+          </p>
+    
+          <div class="d-flex align-items-center g-3">
+            <img src="images/properties/Profile Picture (1).png"
+            class="rounded-circle img-fluid shadow-1 me-2" alt="woman avatar" style="width: 45px;" />
+            <p class="fw-medium  mb-2">Andrew Maximillian</p>
+          </div>
+            <div  style="display: grid; grid-template-columns: repeat(1 , 1fr); gap:10px;">
+                <button type="button" class="btn-red  d-flex align-items-center text-start  p-2 contactBtn"><i class="fa-brands fa-whatsapp me-2"></i> <span>Chat on Whatsapp</span></button>
+                <button type="button" class="btn-red  d-flex align-items-center text-start  p-2 contactBtn"> <i class="fa-solid fa-phone me-2"></i> View Phone Number</button>
+                <button type="button" class="btn-red  d-flex align-items-center text-start p-2 contactBtn"> <i class="fa-solid fa-envelope me-2"></i> Send Enquiry</button>
+            </div>
+      </div>
+
+      </div>
+   
+ 
+  </section>
+<section>
+  <div class="container">
+    <div class=" featured-properties" >
+    <h4>Similar Properties You May Like</h4>
+      <div class="row">
+        <div class="col hp">
+          <div class="card h-100 shadow">
+
+              <img src="images/home/p1.png" class="card-img-top" alt="product.title" />
+  
+            <div class="label-top shadow-sm">
+              <a  target="_blank" href="#">Call for Price</a>
+            </div>
+            <div class="property-details">
+             
+              <h5 class="card-title">
+                <a target="_blank" href="#">Khan Palace</a>
+              </h5>
+               <div class="clearfix mb-1">
+                <span class="float-start "> <i class="fa-solid fa-location-dot"></i>
+                   123 Elm Steet</span>
+    
+                <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link"></a></span>
+              </div>
+            
+              <div class="clearfix mb-1">
+    
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bed "  style="color: #E20A0A; margin: 0 7px; "></i></a></span>
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bath" style="color: #E20A0A;  margin: 0 7px;"></i></a></span>
+                <span class="float-end" style="color: #E20A0A;">
+                  1900sqf
+    
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col hp">
+          <div class="card h-100 ">
+
+              <img src="images/home/p2.png" class="card-img-top" alt="product.title" />
+  
+            <div class="label-top shadow-sm">
+              <a  target="_blank" href="#">Call for Price</a>
+            </div>
+            <div class="property-details">
+             
+              <h5 class="card-title">
+                <a target="_blank" href="#">Modern Adobe</a>
+              </h5>
+               <div class="clearfix mb-1">
+                <span class="float-start "> <i class="fa-solid fa-location-dot"></i>
+                   123 Happy Street</span>
+    
+                <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link"></a></span>
+              </div>
+            
+              <div class="clearfix mb-1">
+    
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bed "  style="color: #E20A0A; margin: 0 7px; "></i></a></span>
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bath" style="color: #E20A0A;  margin: 0 7px;"></i></a></span>
+                <span class="float-end" style="color: #E20A0A;">
+                  1900sqf
+    
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col hp">
+          <div class="card h-100 ">
+
+              <img src="images/home/p3.png" class="card-img-top" alt="product.title" />
+  
+            <div class="label-top shadow-sm">
+              <a  target="_blank" href="#">Call for Price</a>
+            </div>
+            <div class="property-details">
+             
+              <h5 class="card-title">
+                <a target="_blank" href="#">Aberdeen</a>
+              </h5>
+               <div class="clearfix mb-1">
+                <span class="float-start "> <i class="fa-solid fa-location-dot"></i>
+                   123 Keel Main</span>
+    
+                <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link"></a></span>
+              </div>
+            
+              <div class="clearfix mb-1">
+    
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bed "  style="color: #E20A0A; margin: 0 7px; "></i></a></span>
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bath" style="color: #E20A0A;  margin: 0 7px;"></i></a></span>
+                <span class="float-end" style="color: #E20A0A;">
+                  1900sqf
+    
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col hp">
+
+          <div class="card h-100 shadow">
+
+              <img src="images/home/p4.png" class="card-img-top" alt="product.title" />
+  
+            <div class="label-top shadow-sm">
+              <a  target="_blank" href="#">Call for Price</a>
+            </div>
+            <div class="property-details">
+             
+              <h5 class="card-title">
+                <a target="_blank" href="#">H modern</a>
+              </h5>
+               <div class="clearfix mb-1">
+                <span class="float-start "> <i class="fa-solid fa-location-dot"></i>
+                   123 Whip Rocket</span>
+    
+                <span class="float-end"><a href="#" class="small text-muted text-uppercase aff-link"></a></span>
+              </div>
+            
+              <div class="clearfix mb-1">
+    
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bed "  style="color: #E20A0A; margin: 0 7px; "></i></a></span>
+                <span class="float-start" style="color: #E20A0A;">2 <a href="#"><i class="fa-solid fa-bath" style="color: #E20A0A;  margin: 0 7px;"></i></a></span>
+                <span class="float-end" style="color: #E20A0A;">
+                  1900sqf
+    
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+  </div>
+  </div>
+</section>
+  <!-- Avertisement section -->
+  <section class="my-5" style="position: relative;">
+    <div class="container advertise text-center" >
+      <h3 class="fw-bold">Advertisement</h3>
+    </div>
+    <img src="images/vector/Help.png" alt="" style="width: 40px; position: absolute; right: 6%; top:0%;">
+  </section>
+
+      <!-- Footer start -->
+     <div style="height: 7px; background-color: #E20A0A; "></div>
+
+     <footer class="text-center">
+         <!-- Grid container -->
+         <div class="container p-4">
+       
+           <!-- Section: Links -->
+           <section class="">
+             <!--Grid row-->
+             <div class="row">
+                       <!--Grid column-->
+                       <div class="col-lg-2 text-start">
+                        <img src="images/Logo.png" alt="" class="f-logo">
+                       </div>
+                       <!--Grid column-->
+               <!--Grid column-->
+               <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
+                 <h5 >Customer Service</h5>
+       
+                 <ul class="list-unstyled mb-0">
+                   <li>
+                     <a class=""href="#!">Help Centre</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">How To Buy</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">How To Sell</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">Return & Refund</a>
+                   </li>
+                 </ul>
+               </div>
+               <!--Grid column-->
+       
+               <!--Grid column-->
+               <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
+                 <h5>JuKeno Account
+                 </h5>
+       
+                 <ul class="list-unstyled mb-0">
+                   <li>
+                     <a class=""href="login.html">Sign in
+                     </a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">Create Account
+                     </a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">Forgot Password
+                     </a>
+                   </li>
+                
+                 </ul>
+               </div>
+               <!--Grid column-->
+       
+               <!--Grid column-->
+               <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
+                 <h5 >Get to know JuKeno</h5>
+       
+                 <ul class="list-unstyled mb-0">
+                   <li>
+                     <a class=""href="about.html">About Us</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">Terms</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">Privacy</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">FAQ</a>
+                   </li>
+                   <li>
+                     <a class=""href="#!">Contact Us</a>
+                   </li>
+                 </ul>
+               </div>
+               <!--Grid column-->
+       
+               <!--Grid column-->
+               <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                 <h5 >Follow Us</h5>
+       
+                 <ul class="list-unstyled mb-0">
+              
+                   <li>
+             
+                   <a href="index.html" class="text-reset fw-bold ">
+        
+                     <img src="images/fb.png" alt="">
+                     <img src="images/insta.png" alt="">
+                      <img src="images/simple.png" alt="">
+       
+                    </a>
+                   </li>
+                 
+                 </ul>
+               </div>
+               <!--Grid column-->
+               <div class="col-lg-1 col-md-6 m-auto text-start ">
+                 <img src="images/house.png" alt="" style="width: 60px; height: 60px;">
+                </div>
+             </div>
+             <!--Grid row-->
+           </section>
+       
+         </div>
+         <!-- Grid container -->
+       
+         <div class="text-center p-3" style="background-color: #C4C4C4; color: #868686;">
+           <a class="text-reset fw-bold"style=" color: #868686;" href="https://eunoiaits.com/">Eunoia I.T Solutions © 2024</a>
+         </div>
+       
+       </footer>
+         <!-- Footer end -->
+ </main>
+ <!-- Bootstrap -->
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Fontawesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/regular.min.js" integrity="sha512-kOmvRi+0imoekwslOzP/X1LXQnzcttzqYYt3urKD4nhd5fMYwRfXgDS5Nh7b7pQjKPjBPSX9PmhCLrkfkxUcBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</body>
+</html>
