@@ -85,6 +85,20 @@ color: #BFD7EA;
   cursor: pointer;
   font-size: 20px;
 }
+.navbar-toggler{
+  border: 1px solid  #fff;
+  padding: 10px;
+}
+.navbar-toggler-icon {
+  width: 1em;
+  height: 1em;
+  background-image: url('../images/icon/hambur.png'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  border: none; 
+}
+
 
 /*Resize the wrap to see the search bar change!*/
 nav .wrap {
@@ -129,6 +143,9 @@ nav .wrap {
 }
 
 /* Footer css */
+.f-car{
+  width: 85px;
+}
 footer h5,
 footer ul li a{
   color: #7B7B7B;
@@ -139,6 +156,7 @@ footer ul li{
 footer h5{
   margin-bottom: 25px;
   font-size: 18px;
+  font-weight: 600;
 }
 .h-logo,
 .f-logo{
@@ -147,6 +165,56 @@ footer h5{
 .f-logo{
   margin-top: -10px;
 }
+
+
+/* Popup container */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 1000; /* Sit on top */
+}
+
+/* Popup content */
+.popup-content {
+  background-color: #fff;
+  margin: 4% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 50%; /* Could be more or less, depending on screen size */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  color: #000000;
+}
+.popup-content .row{
+  text-align: left;
+}
+.popup-content ul{
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+  
+}
+
+    /* Close button (X) */
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 18px;
+      font-size: 32px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #333;
+    }
+
+    .close-btn:hover {
+      color: red; /* Change color on hover */
+    }
  .swiper {
   width: 100%;
   height: 100%;
@@ -185,7 +253,9 @@ footer h5{
   margin-left: auto;
   margin-right: auto;
 }
-
+.banner1{
+  width: 300px;
+}
 .hero-section .banner1 img{
   height: 86%;
 }
@@ -397,15 +467,12 @@ height: 51px;
 }
 
 /* Company Logo Slider */
+.logo1,
+.logo2,
 .logo3 {
   width: 125px !important;
 }
-.logo1 {
-  width: 125px !important;
-}
-.logo2 {
-  width: 125px !important;
-}
+
 .logos {
   overflow: hidden;
   padding: 60px 0;
@@ -418,7 +485,7 @@ height: 51px;
 .logos:after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 150px;
   height: 100%;
   content: "";
   z-index: 2;
@@ -463,6 +530,9 @@ height: 51px;
 }
 
 /* vector */
+.j-logo{
+  width: 400px;
+}
 .vector {
   width: 293px;
 }
@@ -538,7 +608,19 @@ font-size: 25px;
 .about-us-section-1 p,
 .about-us-section-2 p{
   text-align: justify;
-  width: 63%;
+  width: 75%;
+}
+.about-us .div{
+  width: 50%;
+}
+.about-us-section-1{
+  width: 50%;
+}
+.solar_box{
+  width: 60px;
+  position: absolute;
+  top: 48%;
+  right: 19%;
 }
 
 /* All Info page css */
@@ -1194,15 +1276,7 @@ color: black;
 gap: 10px;
 /* padding: 10px 0px; */
 }
-/* .p-gallery{
-  display: grid;
-  grid-template-columns: repeat(3 , 1fr);
 
-} */
-/* .p-gallery .item2 img,
-.p-gallery .item3 img{
-  width: 45%;
-} */
 .p-gallery-grid .item1 { grid-area: menu; }
 .p-gallery-grid .item2 { grid-area: main; }
 .p-gallery-grid .item3 { grid-area: right; }
@@ -1241,15 +1315,183 @@ gap: 10px;
 .pd-premium-label  a{
   color: black;
   }
-  /* .av-section .item1 { grid-area: item1;}
-  .av-section .item2 { grid-area: item2;}
-  .av-section{
-    display: grid;
-    grid-template-areas:
-    'item1 item1 item1 item1 item1 item1 item2 item2 item2 item2 item2 item2';
-    gap: 10px;
-  } */
   .contactBtn{
     width: 200px;
 
   }
+  @media (max-width: 1536px) {
+    .j-logo{
+      width: 278px;
+    }
+    .vector {
+      left: -31px;
+  }
+  }
+  @media (max-width: 1366px) {
+    .j-logo{
+      width: 278px;
+    }
+    .vector {
+      left: -31px;
+  }
+  /* Company Logo Slider */
+  .logo1,
+  .logo2,
+  .logo3 {
+  width: 100px !important;
+}
+.bus-stop {
+  left: 3.8%;
+  top: 34%;
+  width: 89px;
+}
+.s-circle {
+  left: 3.6%;
+}
+.vector2 {
+  position: absolute;
+  left: 2.5%;
+}
+.help {
+  width: 36px;
+  bottom: 16%;
+}
+  }
+  @media (max-width: 1280px) {
+    .f-car{
+      width: 75px;
+    }
+    .j-logo{
+      width: 278px;
+    }
+    .vector {
+      left: -31px;
+  }
+  .help{
+    right: 3%;
+  }
+  .house {
+    left: 2%;
+}
+  .l-circle {
+    left: 2.7%;
+  }
+  }
+@media (max-width: 1024px) {
+  .hero-section{
+    height: 250px;;
+  }
+  footer h5 {
+    margin-bottom: 13px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.logos {
+  padding: 25px 0;
+}
+  .h-logo, .f-logo {
+    width:
+     127px;
+}
+.logo1, .logo2, .logo3 {
+  width: 88px !important;
+}
+.logos-slide img {
+  margin: -12px 80px;
+}
+.banner1{
+  width: 251px;
+}
+.hero-section .banner1 img {
+  height: 70%;
+}
+
+/* About us */
+.about-us .div img{
+  width: 80%;
+}
+.about-us-section-1 p,
+.about-us-section-2 p{
+  text-align: justify;
+  width: 85%;
+}
+.solar_box{
+  width: 45px;
+  position: absolute;
+  top: 56%;
+  right: 19%;
+}
+
+}
+@media (max-width: 768px) {
+  .h-logo, .f-logo {
+  margin-left: -10px;
+}
+  nav .wrap {
+    position: relative;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
+  .login-section{
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .login-section a{
+    margin: 0;
+  }
+  .login-section .postButton{
+    width: 15%;
+  }
+  nav .wrap {
+    width: 80%;
+}
+.search{
+  width: 60%;
+}
+.popup-content{
+  width: 90%;
+  height: 70%;
+  overflow-y: scroll;
+}
+}
+@media (max-width: 600px) {
+  .login-section .postButton {
+    width: 24%;
+}
+.hero-section {
+  height: 154px;
+}
+.mySwiper2 .category1{
+width: 80px !important;
+}
+.logos-slide img {
+  margin: 0px 24px;
+}
+
+/* About us */
+.about-us .d-md-flex:first-child{
+  flex-direction: column-reverse;
+}
+.about-us{
+  text-align: center;
+}
+.about-us .div{
+  width: 100%;
+}
+.about-us-section-1{
+  width: 100%;
+}
+.about-us-section-1 p, .about-us-section-2 p {
+  width: 100%;
+}
+
+/* All the info page */
+.allInfoBtn button {
+  padding: 15px 19px;
+  margin-bottom: 10px;
+  font-size: 11px;
+}
+#privacyText p {
+  width: 100%;
+}
+}
