@@ -15,6 +15,7 @@ body{
 }
 a{
   text-decoration: none;
+  color: #006DD0;
 }
 label{
   margin: 7px 0;
@@ -102,7 +103,7 @@ color: #BFD7EA;
 
 /*Resize the wrap to see the search bar change!*/
 nav .wrap {
-  width: 35%;
+  width: 27%;
   position: absolute;
   top: 50%;
   left: 51%;
@@ -816,10 +817,19 @@ height: 45px;
       text-align: center;
       font-size: 14px; }
 
+
+     
+      .fa-eye-slash{
+        cursor: pointer;
+      }
+      #togglePassword{
+       cursor: pointer;
+      }
 /* Dashboard css */
 .dasboard .card-body{
   padding: 20px 20px 10px 20px;
 }
+
 /* List Item css */
 .list-search .search {
   width: 100%;
@@ -1421,7 +1431,29 @@ gap: 10px;
   top: 56%;
   right: 19%;
 }
+.popup-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0.3) !important;
+  background-color: #f7f7f7;
+}
 
+.popup-content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f7f7f7;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background-color: #FF5A5F;
+  border-radius: 20px;
+}
+.popup-content{
+  width: 90%;
+  height: 70%;
+  overflow-y: scroll;
+}
+.for-sell-btn::after {
+  left: 56%;
+}
 }
 @media (max-width: 768px) {
   .h-logo, .f-logo {
@@ -1448,11 +1480,10 @@ gap: 10px;
 .search{
   width: 60%;
 }
-.popup-content{
-  width: 90%;
-  height: 70%;
-  overflow-y: scroll;
+.for-sell-btn::after {
+  left: 63%;
 }
+
 }
 @media (max-width: 600px) {
   .login-section .postButton {
@@ -1469,7 +1500,7 @@ width: 80px !important;
 }
 
 /* About us */
-.about-us .d-md-flex:first-child{
+.about-us .d-flex:first-child{
   flex-direction: column-reverse;
 }
 .about-us{
@@ -1494,4 +1525,24 @@ width: 80px !important;
 #privacyText p {
   width: 100%;
 }
+/* Login css */
+.login-container .form-wrap {
+  width: auto;
+}
+.login-container  .form-wrap .tabs {
+  width: auto;
+}
+/* .login-container .form-wrap div:first-child{
+  padding: 1.5em 1.5em 0 1.3em;
+} */
+}
+@media (max-width: 412px) {
+  .for-sell-btn::after {
+    left: 26%;
+  }
+}
+@media (max-width: 360px) {
+  .for-sell-btn::after {
+    left: 31%;
+  }
 }
