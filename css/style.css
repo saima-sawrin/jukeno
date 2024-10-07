@@ -933,7 +933,7 @@ height: 45px;
 
 }
 .table tbody td {
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     color: black;
     white-space: normal !important;
     padding: 0.5rem;
@@ -953,6 +953,21 @@ height: 45px;
   color: #7B7B7B;
   font-size: 16px;
   font-weight: 500;
+}
+/* .user-details {
+  width: 70%;
+  margin: 0 auto;
+}*/
+.user-list-table tr td {
+  text-align: left;
+  border-bottom: none;
+} 
+ .user-details{
+  width: 40%;
+  margin: auto;
+ }
+ .user-list-table tr:first-child td {
+  width: 100%;
 }
 .modal{
   --bs-modal-border-radius: 0px !important;
@@ -1035,6 +1050,13 @@ border: 1px solid  #dee2e6;
 .square-container img {
   width: 100%;
   object-fit: cover; /* Ensures the image covers the entire circle */
+}
+.p-details-section{
+  display: flex;
+}
+.p-details-section .p-details-s-1,
+.p-details-section .p-details-s-2{
+  width: 50%;
 }
 /* View Product Css */
 .star span:first-child::after{
@@ -1329,6 +1351,9 @@ gap: 10px;
     width: 200px;
 
   }
+.nav-link.active.dropdown-toggle font{
+    margin-right: 5px;
+  }
   @media (max-width: 1536px) {
     .j-logo{
       width: 278px;
@@ -1483,7 +1508,16 @@ gap: 10px;
 .for-sell-btn::after {
   left: 63%;
 }
-
+.user-details {
+  width: 50%;
+}
+.p-details-section{
+flex-direction: column;
+}
+.p-details-section .p-details-s-1,
+.p-details-section .p-details-s-2{
+  width: 100%;
+}
 }
 @media (max-width: 600px) {
   .login-section .postButton {
@@ -1535,7 +1569,26 @@ width: 80px !important;
 /* .login-container .form-wrap div:first-child{
   padding: 1.5em 1.5em 0 1.3em;
 } */
+.user-details {
+  width: 100%;
+  margin: 0 auto;
 }
+.editProfile label {
+  font-size: 12px;
+}
+.submit,
+.cancel,
+.send,
+.save{
+  width: 162px;
+  height: 43px;
+}
+.square-container {
+  width: 80px;
+  height: 80px;
+}
+}
+
 @media (max-width: 412px) {
   .for-sell-btn::after {
     left: 26%;

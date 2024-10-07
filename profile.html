@@ -19,6 +19,8 @@
   <body>
 
 <main>
+  <div id="google_translate_element" style="display:none;"></div>
+  
       <!-- Navbar start-->
       <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -29,9 +31,16 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" style="color: #BFD7EA;">EN <i class="fa-solid fa-globe"></i></a>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" aria-current="page" href="#" style="color: #BFD7EA;" id="languageDropdownToggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  EN <i class="fa-solid fa-globe"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdownToggle">
+                  <li><a class="dropdown-item" href="#" onclick="translateLanguage('en', 'English')">EN - English</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="translateLanguage('bn', 'Bangla')">BNG - বাংলা</a></li>
+                </ul>
               </li>
+              
               <hr class="d-block d-lg-none my-1">
               <li class="nav-item">
                 <form role="search">
@@ -53,15 +62,26 @@
         
             
               <li class="nav-item">
-                <div class="d-flex login-section" style="column-gap: 10px;">
-                  <a class="m-lg-auto" href="login.html" style="color: #BFD7EA;">Log In</a>
-                               <img width="28" height="28" class="m-lg-auto d-none d-lg-block" src="images/Vector.png" alt="user-male-circle--v1">
-                               <hr class="d-block d-lg-none my-1">
-                              <button type="submit" class="postButton">
-                               Post Ad
-                             </button>
-                             <hr class="d-block d-lg-none my-1">
-                           </div>
+                <div class="d-flex " style="column-gap: 10px;">
+                  <!-- <a class="nav-link active" aria-current="page" href="#">Log In<i class="fa-solid fa-globe"></i></a> -->
+      
+                    <div class="user" style="position: relative; display: flex; align-items: center;">
+                      <img class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" 
+                     width="28" height="28" class="m-auto" src="images/Vector.png" >
+                     <ul class="dropdown-menu">
+                      <li><a id="dashboard" class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                      <li><a id="profile" class="dropdown-item" href="profile.html">Profile</a></li>
+                      <li><a id="post" class="dropdown-item" href="post.html">Post Item</a></li>
+                      <li><a id="favourite" class="dropdown-item" href="favourite.html">Favourite</a></li>
+                      <li><a id="contact" class="dropdown-item" href="info.html">Contact Us</a></li>
+                      <li><a id="logout" class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                    </div>
+              
+                   <button type="submit" class="postButton">
+                    Post Ad
+                  </button>
+                </div>
         
             </li>
             </ul>
@@ -69,17 +89,61 @@
         </div>
       </nav>
   <!-- Navbar end -->
-
-
+</div>
 <section style="position: relative;">
 <div class="container">
-    <h4 class="my-lg-4 fw-bold">Profile</h4>
+    <h4 class="my-4 mx-3 fw-bold">Profile</h4>
     <div class="d-flex justify-content-center">
       <div class="circle-container">
         <img src="images/dp.jpg">
     </div>
     </div>
-    <div class=" my-lg-4 profile-table m-auto " style="width: 34%;">
+    <div class="user-details" style=" margin: 10px auto;">
+
+      <table class="user-list-table table">
+        <tbody>
+          <tr class="py-3">
+                  <td style="font-weight: 500;color: #7B7B7B;">Name</td>
+                  <td class="fw-bold   py-3 "  id="fullName">John</td>
+              </tr>
+              <tr class="py-3">
+                <td style="font-weight: 500;color: #7B7B7B;">Mobile Phone</td>
+                <td class="fw-bold   py-3 "  id="contactNumber">+60123456789</td>
+            </tr>
+            <tr class="py-3">
+              <td style="font-weight: 500;color: #7B7B7B;">Email Address</td>
+              <td class="fw-bold   py-3 "  id="email">bypyhewib@mailinator.com</td>
+          </tr>
+          <tr class="py-3">
+                  <td style="font-weight: 500;color: #7B7B7B;">Country</td>
+                  <td class="fw-bold   py-3 "  id="username">United States of America</td>
+              </tr>
+            
+            
+              <tr class="py-3">
+                  <td style="font-weight: 500;color: #7B7B7B;">State</td>
+                  <td class="fw-bold   py-3 "  id="role">Utah</td>
+              </tr>
+
+              <tr class="py-3">
+                  <td style="font-weight: 500;color: #7B7B7B;">City</td>
+                  <td class="fw-bold   py-3 " id="password" type="text">Salt Lake City</td>
+
+              </tr>
+              <tr class="py-3">
+                  <td style="font-weight: 500;color: #7B7B7B;">Sex</td>
+                  <td class="fw-bold   py-3 "  id="lockState" type="text">Male</td>
+
+              </tr>
+              <tr class="py-3">
+                  <td style="font-weight: 500; color: #7B7B7B;">Birthday</td>
+                  <td class="fw-bold   py-3 "  id="address">4 - May - 1997</td>
+              </tr>
+      </tbody>
+    </table>
+ 
+  </div>
+    <!-- <div class=" my-lg-4 profile-table m-auto " style="width: 34%;">
         <table class="w-100">
             <tbody>
               <tr class="py-3">
@@ -117,12 +181,12 @@
             </tbody>
         </table>
       
-    </div>
+    </div> -->
     <div class="d-flex my-4" style="justify-content: center;">
-      <button type="button" class="cancel btn-red me-3" onclick="window.location.href='editProfile.html'">Edit Profile</button>
+      <button type="button" class="cancel btn-red me-3 my-2" onclick="window.location.href='editProfile.html'" data-bs-target="_blank">Edit Profile</button>
 
-      <button type="button" class="submit btn-red" data-bs-toggle="modal" data-bs-target="#exampleModal">Change Password</button>
-      <!-- Button trigger modal -->
+      <button type="button" class="submit btn-red my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Change Password</button>
+
 
 
 <!-- Modal -->
@@ -131,9 +195,14 @@
     <div class="modal-content">
       <!-- <div class="modal-header" style="border: none;">
         <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Change Password</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div> -->
       <div class="modal-body">
-        <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Change Password</h1>
+        <div class="d-flex" style="justify-content: space-between;">
+          <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Change Password</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
      <form action="">
       <div class="form-group row my-4">
         <label for="exampleFormControlInput1" class="col-sm-4 col-form-label">Old Password</label>
@@ -170,129 +239,131 @@
 </div>
 <img src="images/vector/Help.png" alt=""  style="  position: absolute;
 width: 44px; right: 5%; bottom: 0px;
-">
+" class="d-none d-md-block">
 </section>
 
- <!-- Footer start -->
- <div style="height: 7px; background-color: #E20A0A; "></div>
- <footer class="text-center">
-     <!-- Grid container -->
-     <div class="container p-4">
-   
-       <!-- Section: Links -->
-       <section class="">
-         <!--Grid row-->
-         <div class="row">
-                   <!--Grid column-->
-                   <div class="col-lg-2 text-start">
-                    <img src="images/Logo.png" alt="" class="f-logo">
-                   </div>
-                   <!--Grid column-->
-           <!--Grid column-->
-           <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
-             <h5 >Customer Service</h5>
-   
-             <ul class="list-unstyled mb-0">
-               <li>
-                 <a class=""href="#!">Help Centre</a>
-               </li>
-               <li>
-                 <a class=""href="#!">How To Buy</a>
-               </li>
-               <li>
-                 <a class=""href="#!">How To Sell</a>
-               </li>
-               <li>
-                 <a class=""href="#!">Return & Refund</a>
-               </li>
-             </ul>
-           </div>
-           <!--Grid column-->
-   
-           <!--Grid column-->
-           <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
-             <h5>JuKeno Account
-             </h5>
-   
-             <ul class="list-unstyled mb-0">
-               <li>
-                 <a class=""href="login.html">Sign in
-                 </a>
-               </li>
-               <li>
-                 <a class=""href="#!">Create Account
-                 </a>
-               </li>
-               <li>
-                 <a class=""href="#!">Forgot Password
-                 </a>
-               </li>
-            
-             </ul>
-           </div>
-           <!--Grid column-->
-   
-           <!--Grid column-->
-           <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-start">
-             <h5 >Get to know JuKeno</h5>
-   
-             <ul class="list-unstyled mb-0">
-               <li>
-                 <a class=""href="about.html">About Us</a>
-               </li>
-               <li>
-                 <a class=""href="#!">Terms</a>
-               </li>
-               <li>
-                 <a class=""href="#!">Privacy</a>
-               </li>
-               <li>
-                 <a class=""href="#!">FAQ</a>
-               </li>
-               <li>
-                 <a class=""href="#!">Contact Us</a>
-               </li>
-             </ul>
-           </div>
-           <!--Grid column-->
-   
-           <!--Grid column-->
-           <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-             <h5 >Follow Us</h5>
-   
-             <ul class="list-unstyled mb-0">
-          
-               <li>
-         
-               <a href="index.html" class="text-reset fw-bold ">
-                               
+<div style="height: 7px; background-color: #E20A0A; "></div>
+<footer class=" text-center">
+<!-- Grid container -->
+<div class="container p-4">
 
-                 <img src="images/fb.png" alt="">
-                 <img src="images/insta.png" alt="">
-                  <img src="images/simple.png" alt="">
-   
-                </a>
-               </li>
-             
-             </ul>
-           </div>
-           <!--Grid column-->
-           <div class="col-lg-1 col-md-6 m-auto text-start ">
-             <img src="images/house.png" alt="" style="width: 60px; height: 60px;">
-            </div>
-         </div>
-         <!--Grid row-->
-       </section>
-   
-     </div>
-     <!-- Grid container -->
-   
-     <div class="text-center p-3" style="background-color: #C4C4C4; color: #868686;">
-       <a class="text-reset fw-bold"style=" color: #868686;" href="https://eunoiaits.com/">Eunoia I.T Solutions © 2024</a>
-     </div>
-   
-   </footer>
-     <!-- Footer end -->
+  <!-- Section: Links -->
+  <section class="">
+    <!--Grid row-->
+    <div class="row">
+              <!--Grid column-->
+              <div class="col-lg-2 mb-3 mb-lg-0  text-center text-md-start">
+               <img src="images/Logo.png" alt="" class="f-logo">
+              </div>
+              <!--Grid column-->
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+        <h5 >Customer Service</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a class=""href="#!">Help Centre</a>
+          </li>
+          <li>
+            <a class=""href="#!">How To Buy</a>
+          </li>
+          <li>
+            <a class=""href="#!">How To Sell</a>
+          </li>
+          <li>
+            <a class=""href="#!">Return & Refund</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+        <h5>JuKeno Account
+        </h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a class=""href="login.html">Sign in
+            </a>
+          </li>
+          <li>
+            <a class=""href="#!">Create Account
+            </a>
+          </li>
+          <li>
+            <a class=""href="#!">Forgot Password
+            </a>
+          </li>
+       
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+        <h5 >Get to know JuKeno</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a class=""href="about.html">About Us</a>
+          </li>
+          <li>
+            <a class=""href="info.html">Terms</a>
+          </li>
+          <li>
+            <a class=""href="info.html">Privacy</a>
+          </li>
+          <li>
+            <a class=""href="info.html">FAQ</a>
+          </li>
+          <li>
+            <a class=""href="info.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-2 col-md-6 mb-4 mb-md-0  text-center text-md-start">
+        <h5 >Follow Us</h5>
+
+        <ul class="list-unstyled mb-0">
+     
+          <li>
+    
+          <a href="index.html" class="text-reset fw-bold ">
+            
+            <!-- <i class="fa-brands fa-facebook"></i> -->
+            <!-- <i class="fa-brands fa-square-instagram"></i> -->
+            <!-- <i class="fa-solid fab fab fa-linkedin "></i> -->
+            <img src="images/fb.png" alt="">
+            <img src="images/insta.png" alt="">
+             <img src="images/simple.png" alt="">
+
+           </a>
+          </li>
+        
+        </ul>
+      </div>
+      <!--Grid column-->
+      <div class="col-lg-1 col-md-6 m-lg-auto text-center text-md-start ">
+        <img src="images/house.png" alt="" style="width: 60px; height: 60px;">
+       </div>
+    </div>
+    <!--Grid row-->
+  </section>
+
+</div>
+<!-- Grid container -->
+
+<div class="text-center p-3" style="background-color: #C4C4C4; color: #868686;">
+  <a class="text-reset fw-bold"style=" color: #868686;" href="https://eunoiaits.com/">Eunoia I.T Solutions © 2024</a>
+</div>
+
+</footer>
+
+ <!-- Footer end -->
 </main>
 <!-- Bootstrap -->
 

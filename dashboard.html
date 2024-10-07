@@ -64,15 +64,26 @@
         
             
               <li class="nav-item">
-                <div class="d-flex login-section" style="column-gap: 10px;">
-                  <a class="m-lg-auto" href="login.html" style="color: #BFD7EA;">Log In</a>
-                               <img width="28" height="28" class="m-lg-auto d-none d-lg-block" src="images/Vector.png" alt="user-male-circle--v1">
-                               <hr class="d-block d-lg-none my-1">
-                              <button type="submit" class="postButton">
-                               Post Ad
-                             </button>
-                             <hr class="d-block d-lg-none my-1">
-                           </div>
+                <div class="d-flex " style="column-gap: 10px;">
+                  <!-- <a class="nav-link active" aria-current="page" href="#">Log In<i class="fa-solid fa-globe"></i></a> -->
+      
+                    <div class="user" style="position: relative; display: flex; align-items: center;">
+                      <img class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" 
+                     width="28" height="28" class="m-auto" src="images/Vector.png" >
+                     <ul class="dropdown-menu">
+                      <li><a id="dashboard" class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                      <li><a id="profile" class="dropdown-item" href="profile.html">Profile</a></li>
+                      <li><a id="post" class="dropdown-item" href="post.html">Post Item</a></li>
+                      <li><a id="favourite" class="dropdown-item" href="favourite.html">Favourite</a></li>
+                      <li><a id="contact" class="dropdown-item" href="info.html">Contact Us</a></li>
+                      <li><a id="logout" class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                    </div>
+              
+                   <button type="submit" class="postButton">
+                    Post Ad
+                  </button>
+                </div>
         
             </li>
             </ul>

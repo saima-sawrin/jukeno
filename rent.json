@@ -1,0 +1,41 @@
+
+{
+    "properties": [
+        {
+            "name": "Khan Palace",
+            "location": "123 Elm Street",
+            "bed":"1",
+            "bath": "2",
+            "cost": "3000",
+            "tag": "Hot Area",
+            "img": "images/home/p1.png"
+        },
+        {
+            "name": "Modern Abode",
+            "location": "123 Happy Street",
+            "bed":"3",
+            "bath": "3",
+            "cost": "10,000",
+                "tag": "Town Area",
+                   "img": "images/home/p2.png"
+        },
+        {
+            "name": "Aberdeen Living",
+            "location": "123 Keel Main",
+            "bed":"4",
+            "bath": "3",
+            "cost": "100,000",
+                "tag": "Countryside",
+                   "img": "images/home/p3.png"
+        },
+        {
+            "name": "H modern",
+            "location": "123 Whip Rocket",
+            "bed":"3",
+            "bath": "2",
+            "cost": "150,000",
+                "tag": "Hot Area",
+                   "img": "images/home/p4.png"
+        }
+    ]
+}
